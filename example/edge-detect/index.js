@@ -34,13 +34,9 @@ class App extends Component {
 	}
 
 	process(img) {
-		this.detective.processImage(img, true, this.refs.parent).then(() => {
-			this.detective.detectEdges(true).then(() => {
-				console.log("DONE");
-			});
-		})
+		this.detective.addImage(img, this.refs.parent);
 
-		
+
 	}
 
 	render() {
